@@ -201,7 +201,7 @@ export const updatedAccountInfo = (params) =>
                 reject(message);
             });
     });
-    export const payment = (params) =>
+export const payment = (params) =>
     new Promise((resolve, reject) => {
         HTTP_CLIENT.post("payment/crypto", params)
             .then((response) => {
@@ -212,12 +212,10 @@ export const updatedAccountInfo = (params) =>
                 reject(message);
             });
     });
-    
 
-    
-export const fetchTwittes = () =>
+export const fetchPayment = (page) =>
     new Promise((resolve, reject) => {
-        HTTP_CLIENT_2.get("tweets?ids=1261326399320715264,1278347468690915330")
+        HTTP_CLIENT.get(`payment/liste/${page}`)
             .then((response) => {
                 resolve(response);
             })

@@ -783,44 +783,66 @@ var AllUser = function AllUser() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "cryptoFullName": () => (/* binding */ cryptoFullName),
 /* harmony export */   "getNumberPage": () => (/* binding */ getNumberPage),
 /* harmony export */   "roleToSave": () => (/* binding */ roleToSave),
 /* harmony export */   "roleToShow": () => (/* binding */ roleToShow)
 /* harmony export */ });
 var roleToShow = function roleToShow(role) {
   switch (role) {
-    case 'journalist':
-      return 'gestionnaire';
+    case "journalist":
+      return "gestionnaire";
 
-    case 'accounting':
-      return 'comptable';
+    case "accounting":
+      return "comptable";
 
-    case 'observer':
-      return 'consultant';
+    case "observer":
+      return "consultant";
 
-    case 'admin':
-      return 'administrateur';
+    case "admin":
+      return "administrateur";
 
     default:
-      return 'utilisateur';
+      return "utilisateur";
+  }
+};
+var cryptoFullName = function cryptoFullName(crypto) {
+  switch (crypto) {
+    case "btc":
+      return "Bitcoin";
+
+    case "eth":
+      return "Ethereum";
+
+    case "ltc":
+      return "Litecoin";
+
+    case "bch":
+      return "Bitcoin Cash";
+
+    case "xrp":
+      return "Ripple";
+
+    default:
+      return "";
   }
 };
 var roleToSave = function roleToSave(role) {
   switch (role) {
-    case 'gestionnaire':
-      return 'journalist';
+    case "gestionnaire":
+      return "journalist";
 
-    case 'comptable':
-      return 'accounting';
+    case "comptable":
+      return "accounting";
 
-    case 'consultant':
-      return 'observer';
+    case "consultant":
+      return "observer";
 
-    case 'administrateur':
-      return 'admin';
+    case "administrateur":
+      return "admin";
 
     default:
-      return 'user';
+      return "user";
   }
 };
 var getNumberPage = function getNumberPage() {

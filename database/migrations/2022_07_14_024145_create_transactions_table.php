@@ -22,7 +22,7 @@ class CreateTransactionsTable extends Migration
             $table->float('montant_envoye');
             $table->float('montant_recu');
             $table->string('adress_sender');
-            $table->strng('adress_receiver');
+            $table->string('adress_receiver');
             $table->foreignId('user_id')->constrained();
             $table->foreign('devise_envoyee')->references('sigle')->on('monnaies');
             $table->foreign('devise_recue')->references('sigle')->on('monnaies');

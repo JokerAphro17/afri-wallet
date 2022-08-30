@@ -64,4 +64,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Kyc::class);
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

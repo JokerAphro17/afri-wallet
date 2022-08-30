@@ -561,9 +561,6 @@ video {
 .fixed {
   position: fixed;
 }
-.absolute {
-  position: absolute;
-}
 .relative {
   position: relative;
 }
@@ -671,9 +668,6 @@ video {
 }
 .block {
   display: block;
-}
-.inline {
-  display: inline;
 }
 .flex {
   display: flex;
@@ -887,9 +881,6 @@ video {
 }
 .font-bold {
   font-weight: 700;
-}
-.uppercase {
-  text-transform: uppercase;
 }
 .leading-7 {
   line-height: 1.75rem;

@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\CouponController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\CouponController;
+use App\Http\Controllers\Api\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,5 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/users/change/photo',[AuthController::class, 'changePhoto']);
     Route::get('/signout', [AuthController::class, 'logout']);
     Route::post('/payment/crypto',[PaymentController::class, 'bycard']);
+    Route::get('/payment/liste/{page}',[PaymentController::class, 'paymentListe']);
 });

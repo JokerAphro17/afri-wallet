@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\ClientSeeder;
 
+use Database\Seeders\MonnaieSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,7 +19,9 @@ class DatabaseSeeder extends Seeder
     {
         //  \App\Models\User::factory(57)->create();
          $this->call(ClientSeeder::class);
+         $this->call(MonnaieSeeder::class);
          $this->call(UserSeeder::class);
+         $this->call(TransactionSeeder::class);
        
          
          
