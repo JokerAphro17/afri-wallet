@@ -35,5 +35,5 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/admin/page/{page}', [UserController::class, 'adminListePaginate']);
     Route::post('/users/change/photo',[AuthController::class, 'changePhoto']);
     Route::get('/signout', [AuthController::class, 'logout']);
-    Route::post('/payment/crypto',[PaymentController::class, 'cryptoPayment']);
+    Route::post('/payment/crypto',[PaymentController::class, 'bycard']);
 });
