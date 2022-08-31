@@ -137,7 +137,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Control
                                 type="text"
                                 name="lastname"
-                                {...register("lastname", { required: true })}
                                 value={formProfile?.lastname ?? ""}
                                 onChange={handlerInput}
                                 className={`${
@@ -164,7 +163,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Control
                                 type="text"
                                 name="firstname"
-                                {...register("firstname", { required: true })}
                                 value={formProfile?.firstname ?? ""}
                                 onChange={handlerInput}
                                 className={`${
@@ -217,7 +215,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Select
                                 name="genre"
                                 value={formProfile?.genre ?? ""}
-                                {...register("genre", { required: true })}
                                 onChange={handlerInput}
                                 className={`form-control ${
                                     errorFormProfile?.genre || errors?.genre
@@ -246,7 +243,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Control
                                 type="text"
                                 name="adresse"
-                                {...register("adresse", { required: false })}
                                 value={formProfile?.adresse ?? ""}
                                 onChange={handlerInput}
                                 className={`${
@@ -280,7 +276,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Control
                                 type="email"
                                 name="email"
-                                {...register("email", { required: true })}
                                 value={formProfile?.email ?? ""}
                                 onChange={handlerInput}
                                 className={`${
@@ -305,7 +300,6 @@ const FormUser = ({ userModel, errorUserModel, isLoading, onSubmitAction }) => {
                             <Form.Select
                                 name="role"
                                 value={formProfile?.role ?? ""}
-                                {...register("role", { required: true })}
                                 onChange={handlerInput}
                                 className={`form-control ${
                                     errorFormProfile?.role || errors?.role

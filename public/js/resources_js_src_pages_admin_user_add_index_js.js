@@ -374,17 +374,14 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserLastname",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Nom de famille"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
               type: "text",
-              name: "lastname"
-            }, register("lastname", {
-              required: true
-            })), {}, {
+              name: "lastname",
               value: (_formProfile$lastname = formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname) !== null && _formProfile$lastname !== void 0 ? _formProfile$lastname : "",
               onChange: handlerInput,
               className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? "is-invalid" : ""),
               placeholder: "Renseigner le nom de famille"
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$lastname = errors.lastname) === null || _errors$lastname === void 0 ? void 0 : _errors$lastname.type) === "required" && "Ce champ nom de famille est requis" || (errorFormProfile === null || errorFormProfile === void 0 ? void 0 : errorFormProfile.lastname)
             }) : null]
@@ -393,17 +390,14 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserFirstname",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Prenom(s)"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
               type: "text",
-              name: "firstname"
-            }, register("firstname", {
-              required: true
-            })), {}, {
+              name: "firstname",
               value: (_formProfile$firstnam = formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname) !== null && _formProfile$firstnam !== void 0 ? _formProfile$firstnam : "",
               onChange: handlerInput,
               className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? "is-invalid" : ""),
               placeholder: "Renseigner le(s) prenom(s)"
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$firstname = errors.firstname) === null || _errors$firstname === void 0 ? void 0 : _errors$firstname.type) === "required" && "Ce champ prenom(s) est requis" || errorFormProfile.firstname
             }) : null]
@@ -437,12 +431,9 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserGenre",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Genre"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Select, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Select, {
               name: "genre",
-              value: (_formProfile$genre = formProfile === null || formProfile === void 0 ? void 0 : formProfile.genre) !== null && _formProfile$genre !== void 0 ? _formProfile$genre : ""
-            }, register("genre", {
-              required: true
-            })), {}, {
+              value: (_formProfile$genre = formProfile === null || formProfile === void 0 ? void 0 : formProfile.genre) !== null && _formProfile$genre !== void 0 ? _formProfile$genre : "",
               onChange: handlerInput,
               className: "form-control ".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.genre || errors !== null && errors !== void 0 && errors.genre ? "is-invalid" : ""),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
@@ -458,7 +449,7 @@ var FormUser = function FormUser(_ref) {
                 value: "None",
                 children: "Non defini"
               })]
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.genre || errors !== null && errors !== void 0 && errors.genre ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.genre || errors !== null && errors !== void 0 && errors.genre ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$genre = errors.genre) === null || _errors$genre === void 0 ? void 0 : _errors$genre.type) === "required" && "Ce champ genre est requis" || errorFormProfile.genre
             }) : null]
@@ -467,17 +458,14 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserFirstname",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Adresse domicili\xE9"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
               type: "text",
-              name: "adresse"
-            }, register("adresse", {
-              required: false
-            })), {}, {
+              name: "adresse",
               value: (_formProfile$adresse = formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _formProfile$adresse !== void 0 ? _formProfile$adresse : "",
               onChange: handlerInput,
               className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? "is-invalid" : ""),
               placeholder: "Renseigner l'adresse domicili\xE9e"
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$adresse = errors.adresse) === null || _errors$adresse === void 0 ? void 0 : _errors$adresse.type) === "required" && "Ce champ adresse est requis" || errorFormProfile.adresse
             }) : null]
@@ -500,17 +488,14 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserEmail",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Adresse mail"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Control, {
               type: "email",
-              name: "email"
-            }, register("email", {
-              required: true
-            })), {}, {
+              name: "email",
               value: (_formProfile$email = formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _formProfile$email !== void 0 ? _formProfile$email : "",
               onChange: handlerInput,
               className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? "is-invalid" : ""),
               placeholder: "Renseigner l'adresse mail"
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$email = errors.email) === null || _errors$email === void 0 ? void 0 : _errors$email.type) === "required" && "Ce champ adresse mail est requis" || errorFormProfile.email
             }) : null]
@@ -523,12 +508,9 @@ var FormUser = function FormUser(_ref) {
             controlId: "formUserRole",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Label, {
               children: "Role"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Select, _objectSpread(_objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Select, {
               name: "role",
-              value: (_formProfile$role = formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _formProfile$role !== void 0 ? _formProfile$role : ""
-            }, register("role", {
-              required: true
-            })), {}, {
+              value: (_formProfile$role = formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _formProfile$role !== void 0 ? _formProfile$role : "",
               onChange: handlerInput,
               className: "form-control ".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? "is-invalid" : ""),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("option", {
@@ -541,7 +523,7 @@ var FormUser = function FormUser(_ref) {
                 value: "admin",
                 children: "Administrateur"
               })]
-            })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
+            }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"].Text, {
               className: "text-danger",
               children: (errors === null || errors === void 0 ? void 0 : (_errors$role = errors.role) === null || _errors$role === void 0 ? void 0 : _errors$role.type) === "required" && "Ce champ role est requis" || errorFormProfile.role
             }) : null]
