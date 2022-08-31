@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
+use App\Mail\Restriction;
 use App\Mail\UserCreated;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -57,7 +58,8 @@ class UserController extends BaseController
             $password = Str::random(8);
             $input['password'] = Hash::make($password);
             $user = User::create($input);
-            Mail::to($user->email)->send(new UserCreated($user, $password));
+            $host = $request->getHttpHost();
+            Mail::to($user->email)->send(new UserCreated($user, $password, $host));
             return $this->sendResponse($user, 'Utilisateur créé avec success.',200 );
         } catch (\Exception $e) {
             return $this->sendError('Application crash.', $e->getMessage() ,500 );
@@ -144,7 +146,9 @@ class UserController extends BaseController
             if($admin->role != 'superadmin'){
                 return $this->sendError('Vous n\'avez pas les droits de modififier les access.', [],403);
             }
-            $user->update(['is_active' => !$user->is_active]);
+            $user->is_active = $user->is_active ? false : true;
+            $user->save();
+            Mail::to($user->email)->send(new Restriction($user));
             return $this->sendResponse($user, 'Access modifié avec succès.');
         } catch (\Trowable $th) {
             return $this->sendError('Erreur lors de la modification de l\'accès.', $th->getMessage(), 500);

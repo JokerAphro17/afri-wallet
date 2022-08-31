@@ -1,5 +1,5 @@
 @component('mail::message')
-@if(!$user->restriction)
+@if($user->is_active)
     Vore compte a été activé <br>
     cliquer sur le boutton pour vous connecté 
     @component('mail::button', ['url' => env('APP_URL').'/login'])

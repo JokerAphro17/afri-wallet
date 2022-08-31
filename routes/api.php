@@ -38,4 +38,5 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/signout', [AuthController::class, 'logout']);
     Route::post('/payment/crypto',[PaymentController::class, 'bycard']);
     Route::get('/payment/liste/{page}',[PaymentController::class, 'paymentListe']);
+    Route::get('/users/{user}/restriction',[UserController::class, 'access']);
 });

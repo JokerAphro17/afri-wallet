@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import FormUser from '../components/FormUser';
-import { errorNotif, successNotif } from '../../../../components/notification';
-import { fetchInfoUser, updatedUserInfo } from '../../../../api/request';
-import { API_STORAGE_URL } from '../../../../utilities/constant/app.constant';
-import { formatPropValueToString } from '../../../../api/client';
-import PageHeader from '../../../../layouts/components/page-header';
+import FormUser from "../components/FormUser";
+import { errorNotif, successNotif } from "../../../../components/notification";
+import { fetchInfoUser, updatedUserInfo } from "../../../../api/request";
+import { API_STORAGE_URL } from "../../../../utilities/constant/app.constant";
+import { formatPropValueToString } from "../../../../api/client";
+import PageHeader from "../../../../layouts/components/page-header";
 
 const EditUser = () => {
     const location = useLocation();
@@ -30,30 +30,30 @@ const EditUser = () => {
     });
     const [isLoading, setIsLoading] = useState(false);
     const [fetchData, setFetchData] = useState(true);
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
-        const {state} = location;
-        if(state?.uuid) {
-            if(!fetchData) {
+        const { state } = location;
+        if (state?.uuid) {
+            if (!fetchData) {
                 setFetchData(true);
             }
             setFormProfile({
                 ...formProfile,
                 uuid: state.uuid,
-            })
+            });
         } else {
-            navigate(-1)
+            navigate(-1);
         }
-    }, [location?.state?.uuid])
+    }, [location?.state?.uuid]);
 
     useEffect(() => {
         if (formProfile.uuid && !formProfile.lastname) {
-            (async () => await fetchAllUsers())()
+            (async () => await fetchUsers())();
         }
-    }, [formProfile?.uuid, formProfile.lastname])
+    }, [formProfile?.uuid, formProfile.lastname]);
 
-    const fetchAllUsers = async () => {
+    const fetchUsers = async () => {
         try {
             setFetchData(true);
             const response = await fetchInfoUser(formProfile.uuid);
@@ -61,16 +61,16 @@ const EditUser = () => {
             if (data) {
                 const _profile = {
                     ...data,
-                    avatar: !data?.avatar ? {} : {preview: `${API_STORAGE_URL}/${avatar}`}
-                }
+                };
                 setFormProfile(_profile);
+                console.log(_profile);
             }
             setFetchData(false);
         } catch (error) {
             setFetchData(false);
-            if(typeof error === 'object') {
+            if (typeof error === "object") {
             } else {
-                errorNotif('Avertissement', error);
+                errorNotif("Avertissement", error);
             }
         }
     };
@@ -83,23 +83,26 @@ const EditUser = () => {
             genre: modelData?.genre ?? "None",
             email: modelData?.email ?? "",
             role: modelData?.role ?? "",
-            adresse: modelData?.adresse ?? '',
-            direction: modelData?.direction ?? '',
-            service: modelData?.service ?? '',
-            fonction: modelData?.fonction ?? '',
-            telephone: modelData?.telephone ?? '',
+            adresse: modelData?.adresse ?? "",
+            direction: modelData?.direction ?? "",
+            service: modelData?.service ?? "",
+            fonction: modelData?.fonction ?? "",
+            telephone: modelData?.telephone ?? "",
             avatar: modelData?.avatar?.preview ? modelData.avatar : null,
-        }
+        };
         try {
             setIsLoading(true);
             await updatedUserInfo(formProfile?.uuid, params);
-            successNotif('Notification', `Les informations de l'utilisateur ${modelData?.lastname} ${modelData?.firstname} a été mise à jour avec succès.`)
+            successNotif(
+                "Notification",
+                `Les informations de l'utilisateur ${modelData?.lastname} ${modelData?.firstname} a été mise à jour avec succès.`
+            );
             // navigate('/handlers/users/show', {state: {uuid: ''});
-            navigate('/handlers/account-admins');
+            navigate("/handlers/account-admins");
         } catch (error) {
             setFormProfile(modelData);
             setIsLoading(false);
-            let _message = '';
+            let _message = "";
             let _errorForm = {
                 lastname: "",
                 firstname: "",
@@ -108,25 +111,28 @@ const EditUser = () => {
                 role: "",
                 avatar: "",
             };
-            if(typeof error === 'object') {
+            if (typeof error === "object") {
                 _errorForm = formatPropValueToString(error, _errorForm);
             } else {
                 _message = error;
-                errorNotif('Avertissement', _message);
+                errorNotif("Avertissement", _message);
             }
             setMessage(_message);
-            setErrorFormProfile(_errorForm)
+            setErrorFormProfile(_errorForm);
         }
-    }
+    };
 
     return (
         <>
-            <PageHeader title={'Modifier le profil utilisateur'}>
+            <PageHeader title={"Modifier le profil utilisateur"}>
                 <Button
-                    variant="dark" size='md'
-                    onClick={() => navigate('/handlers/account-admins')} >
-                    <i className="zmdi zmdi-accounts-list-alt"></i>{' '}
-                    Liste des utilisateurs</Button>
+                    variant="dark"
+                    size="md"
+                    onClick={() => navigate("/handlers/account-admins")}
+                >
+                    <i className="zmdi zmdi-accounts-list-alt"></i> Liste des
+                    utilisateurs
+                </Button>
             </PageHeader>
             {fetchData ? (
                 <div>Veuillez patienter ...</div>
@@ -140,6 +146,6 @@ const EditUser = () => {
             )}
         </>
     );
-}
+};
 
 export default EditUser;

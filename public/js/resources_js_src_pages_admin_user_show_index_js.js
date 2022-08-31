@@ -9185,16 +9185,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-moment__WEBPACK_IMPORTED_MODULE_7___default().locale('fr');
+moment__WEBPACK_IMPORTED_MODULE_7___default().locale("fr");
 
 var ShowUser = function ShowUser() {
-  var _HANDLER_STORAGE$GET$, _HANDLER_STORAGE$GET, _roleToShow, _formProfile$email, _formProfile$adresse, _formProfile$telephon, _formProfile$directio, _formProfile$service, _formProfile$fonction;
+  var _HANDLER_STORAGE$GET$, _HANDLER_STORAGE$GET, _roleToShow, _formProfile$email, _formProfile$adresse, _formProfile$telephon;
 
   var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_13__.useLocation)();
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_13__.useNavigate)();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    uuid: ''
+    uuid: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       formProfile = _useState2[0],
@@ -9225,7 +9225,7 @@ var ShowUser = function ShowUser() {
       showModalDisabled = _useState12[0],
       setShowModalDisabled = _useState12[1];
 
-  var useConnect = (_HANDLER_STORAGE$GET$ = (_HANDLER_STORAGE$GET = _data__WEBPACK_IMPORTED_MODULE_10__["default"].GET(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_4__.USER_SESSION, 'object')) === null || _HANDLER_STORAGE$GET === void 0 ? void 0 : _HANDLER_STORAGE$GET.data) !== null && _HANDLER_STORAGE$GET$ !== void 0 ? _HANDLER_STORAGE$GET$ : null;
+  var useConnect = (_HANDLER_STORAGE$GET$ = (_HANDLER_STORAGE$GET = _data__WEBPACK_IMPORTED_MODULE_10__["default"].GET(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_4__.USER_SESSION, "object")) === null || _HANDLER_STORAGE$GET === void 0 ? void 0 : _HANDLER_STORAGE$GET.data) !== null && _HANDLER_STORAGE$GET$ !== void 0 ? _HANDLER_STORAGE$GET$ : null;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var state = location.state;
 
@@ -9294,8 +9294,8 @@ var ShowUser = function ShowUser() {
               (0,_components_sweet_alert__WEBPACK_IMPORTED_MODULE_8__.alertClosed)();
               setIsLoading(false);
 
-              if (_typeof(_context2.t0) === 'object') {} else {
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)('Avertissement', _context2.t0);
+              if (_typeof(_context2.t0) === "object") {} else {
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)("Avertissement", _context2.t0);
               }
 
             case 18:
@@ -9323,7 +9323,7 @@ var ShowUser = function ShowUser() {
               return (0,_api_request__WEBPACK_IMPORTED_MODULE_1__.generateUserPassword)(formProfile.uuid);
 
             case 4:
-              (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.successNotif)('Notification', 'Mot de passe généré avec succès.');
+              (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.successNotif)("Notification", "Mot de passe généré avec succès.");
               setHasGenerate(false);
               setShowModal(false);
               _context3.next = 13;
@@ -9334,8 +9334,8 @@ var ShowUser = function ShowUser() {
               _context3.t0 = _context3["catch"](0);
               setHasGenerate(false);
 
-              if (_typeof(_context3.t0) === 'object') {} else {
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)('Avertissement', _context3.t0);
+              if (_typeof(_context3.t0) === "object") {} else {
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)("Avertissement", _context3.t0);
               }
 
             case 13:
@@ -9362,9 +9362,7 @@ var ShowUser = function ShowUser() {
               _context4.prev = 0;
               setHasDisabled(true);
               _context4.next = 4;
-              return (0,_api_request__WEBPACK_IMPORTED_MODULE_1__.restrictionUserAccess)(formProfile.uuid, {
-                restriction: !(formProfile !== null && formProfile !== void 0 && formProfile.restriction)
-              });
+              return (0,_api_request__WEBPACK_IMPORTED_MODULE_1__.updateAcessAccount)(formProfile.uuid);
 
             case 4:
               response = _context4.sent;
@@ -9376,11 +9374,11 @@ var ShowUser = function ShowUser() {
                     preview: "".concat(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_4__.API_STORAGE_URL, "/").concat(_material_tailwind_react__WEBPACK_IMPORTED_MODULE_11__.avatar)
                   }
                 });
-                console.log('_profile :>> ', _profile);
+                console.log("_profile :>> ", _profile);
                 setFormProfile(_profile);
               }
 
-              (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.successNotif)('Notification', "Le compte a \xE9t\xE9 ".concat(formProfile !== null && formProfile !== void 0 && formProfile.restriction ? 'déactivé' : 'activé', " avec succ\xE8s."));
+              (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.successNotif)("Notification", "Le compte a \xE9t\xE9 ".concat(!(formProfile !== null && formProfile !== void 0 && formProfile.is_active) ? "activé" : "désactivé", " avec succ\xE8s."));
               setHasDisabled(false);
               setShowModalDisabled(false);
               _context4.next = 16;
@@ -9391,8 +9389,8 @@ var ShowUser = function ShowUser() {
               _context4.t0 = _context4["catch"](0);
               setHasDisabled(false);
 
-              if (_typeof(_context4.t0) === 'object') {} else {
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)('Avertissement', _context4.t0);
+              if (_typeof(_context4.t0) === "object") {} else {
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_3__.errorNotif)("Avertissement", _context4.t0);
               }
 
             case 16:
@@ -9410,7 +9408,7 @@ var ShowUser = function ShowUser() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_layouts_components_page_header__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      title: 'Détail sur le profil',
+      title: "Détail sur le profil",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
         className: "mr-2",
         variant: "dark",
@@ -9420,27 +9418,27 @@ var ShowUser = function ShowUser() {
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
           className: "zmdi zmdi-accounts-list-alt"
-        }), ' ', "Retour \xE0 la liste"]
+        }), " Retour \xE0 la liste"]
       }), (useConnect === null || useConnect === void 0 ? void 0 : useConnect.uuid) !== (formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid) && !isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
         className: "mr-2",
-        variant: "".concat(formProfile !== null && formProfile !== void 0 && formProfile.restriction ? "success" : "danger"),
+        variant: "".concat(formProfile !== null && formProfile !== void 0 && formProfile.is_active ? "danger" : "success"),
         onClick: function onClick() {
           return setShowModalDisabled(true);
         },
-        children: [formProfile !== null && formProfile !== void 0 && formProfile.restriction ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
+        children: [!(formProfile !== null && formProfile !== void 0 && formProfile.is_active) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
             className: "zmdi zmdi-check"
-          }), " D\xE9verrouiller"]
+          }), " ", "D\xE9verrouiller"]
         }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
             className: "zmdi zmdi-block"
           }), " Verrouiller"]
-        }), " le compte"]
-      }) : null, (formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== 'user' && (useConnect === null || useConnect === void 0 ? void 0 : useConnect.uuid) !== (formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        }), " ", "le compte"]
+      }) : null, (formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== "user" && (useConnect === null || useConnect === void 0 ? void 0 : useConnect.uuid) !== (formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
         variant: "light",
         size: "md",
         onClick: function onClick() {
-          return navigate('/handlers/account-admins/edit', {
+          return navigate("/handlers/account-admins/edit", {
             state: {
               uuid: formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid
             }
@@ -9451,10 +9449,13 @@ var ShowUser = function ShowUser() {
         }), " Modifier"]
       }) : null]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__["default"], {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
         sm: 12,
-        md: 4,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        md: {
+          span: 4,
+          offset: 1
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
           body: true,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
             className: "wideget-user text-center",
@@ -9463,7 +9464,7 @@ var ShowUser = function ShowUser() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                 className: "wideget-user-img",
                 children: formProfile !== null && formProfile !== void 0 && formProfile.avatar ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_components_icones__WEBPACK_IMPORTED_MODULE_2__.IconProfile, {
-                  className: 'avatar-show'
+                  className: "avatar-show"
                 }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                   className: "",
                   src: "".concat(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_4__.API_STORAGE_URL, "/").concat(formProfile === null || formProfile === void 0 ? void 0 : formProfile.avatar),
@@ -9476,10 +9477,10 @@ var ShowUser = function ShowUser() {
                   children: [formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname, " ", formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("h6", {
                   className: "text-muted mb-4",
-                  children: ["Compte cr\xE9\xE9 le ", ' ', formProfile !== null && formProfile !== void 0 && formProfile.created_at ? moment__WEBPACK_IMPORTED_MODULE_7___default()(formProfile === null || formProfile === void 0 ? void 0 : formProfile.created_at).format('LL') : '', '  ']
+                  children: ["Compte cr\xE9\xE9 le", " ", formProfile !== null && formProfile !== void 0 && formProfile.created_at ? moment__WEBPACK_IMPORTED_MODULE_7___default()(formProfile === null || formProfile === void 0 ? void 0 : formProfile.created_at).format("LL") : "", "  "]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("p", {
                   className: "text-muter",
-                  children: formProfile !== null && formProfile !== void 0 && formProfile.restriction ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: !(formProfile !== null && formProfile !== void 0 && formProfile.is_active) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["default"], {
                     pill: true,
                     variant: "danger",
                     bg: "danger",
@@ -9487,7 +9488,7 @@ var ShowUser = function ShowUser() {
                       className: "text-white",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
                         className: "zmdi zmdi-lock-outline"
-                      }), ' ', "Compte verrouill\xE9"]
+                      }), " ", "Compte verrouill\xE9"]
                     })
                   }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["default"], {
                     pill: true,
@@ -9497,10 +9498,10 @@ var ShowUser = function ShowUser() {
                       className: "text-white",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
                         className: "zmdi zmdi-lock-open"
-                      }), ' ', "Compte accessible"]
+                      }), " ", "Compte accessible"]
                     })
                   })
-                }), (formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== 'user' && (useConnect === null || useConnect === void 0 ? void 0 : useConnect.uuid) !== (formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+                }), (formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== "user" && (useConnect === null || useConnect === void 0 ? void 0 : useConnect.uuid) !== (formProfile === null || formProfile === void 0 ? void 0 : formProfile.uuid) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
                   variant: "warning",
                   className: "mt-2",
                   onClick: function onClick() {
@@ -9508,12 +9509,19 @@ var ShowUser = function ShowUser() {
                   },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
                     className: "zmdi zmdi-lock-outline"
-                  }), ' ', "G\xE9n\xE9rer un nouveau mot de passe"]
+                  }), " ", "G\xE9n\xE9rer un nouveau mot de passe"]
                 }) : null]
               })]
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        sm: 12,
+        md: {
+          span: 4,
+          offset: 1
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
           body: true,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"].Header, {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h5", {
@@ -9541,7 +9549,7 @@ var ShowUser = function ShowUser() {
                   children: "Groupe de compte"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "text-muted fs-14",
-                  children: ((_roleToShow = (0,_utilities_helper__WEBPACK_IMPORTED_MODULE_5__.roleToShow)(formProfile.role)) !== null && _roleToShow !== void 0 ? _roleToShow : '').toUpperCase()
+                  children: ((_roleToShow = (0,_utilities_helper__WEBPACK_IMPORTED_MODULE_5__.roleToShow)(formProfile.role)) !== null && _roleToShow !== void 0 ? _roleToShow : "").toUpperCase()
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
@@ -9562,7 +9570,7 @@ var ShowUser = function ShowUser() {
                   children: "Adresse mail"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "text-muted fs-14",
-                  children: (_formProfile$email = formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _formProfile$email !== void 0 ? _formProfile$email : '---'
+                  children: (_formProfile$email = formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _formProfile$email !== void 0 ? _formProfile$email : "---"
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
@@ -9583,7 +9591,7 @@ var ShowUser = function ShowUser() {
                   children: "Adresse"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "text-muted fs-14",
-                  children: (_formProfile$adresse = formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _formProfile$adresse !== void 0 ? _formProfile$adresse : '---'
+                  children: (_formProfile$adresse = formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _formProfile$adresse !== void 0 ? _formProfile$adresse : "---"
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
@@ -9604,92 +9612,13 @@ var ShowUser = function ShowUser() {
                   children: "Telephone"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
                   className: "text-muted fs-14",
-                  children: (_formProfile$telephon = formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _formProfile$telephon !== void 0 ? _formProfile$telephon : '---'
-                })]
-              })]
-            })]
-          })]
-        })]
-      }), (formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== 'user' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
-        sm: 12,
-        md: 4,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
-          body: true,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"].Header, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h5", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("strong", {
-                children: "Information professionnelle"
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-            className: "wideget-user-contact mt-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-              className: "media mb-5 mt-0",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                className: "d-flex mr-3",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
-                  className: "user-contact-icon bg-dark",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
-                    className: "zmdi zmdi-accounts text-white"
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                className: "media-body",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("a", {
-                  href: "#",
-                  className: "text-dark",
-                  children: "Direction"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-muted fs-14",
-                  children: (_formProfile$directio = formProfile.direction) !== null && _formProfile$directio !== void 0 ? _formProfile$directio : '---'
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-              className: "media mb-5 mt-0",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                className: "d-flex mr-3",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
-                  className: "user-contact-icon bg-dark",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
-                    className: "fa fa-envelope text-white"
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                className: "media-body",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("a", {
-                  href: "#",
-                  className: "text-dark",
-                  children: "Service"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-muted fs-14",
-                  children: (_formProfile$service = formProfile === null || formProfile === void 0 ? void 0 : formProfile.service) !== null && _formProfile$service !== void 0 ? _formProfile$service : '---'
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-              className: "media mb-5 mt-0",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                className: "d-flex mr-3",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
-                  className: "user-contact-icon bg-dark",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("i", {
-                    className: "fa fa-globe text-white"
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
-                className: "media-body",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("a", {
-                  href: "#",
-                  className: "text-dark",
-                  children: "Fonction"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
-                  className: "text-muted fs-14",
-                  children: (_formProfile$fonction = formProfile === null || formProfile === void 0 ? void 0 : formProfile.fonction) !== null && _formProfile$fonction !== void 0 ? _formProfile$fonction : '---'
+                  children: (_formProfile$telephon = formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _formProfile$telephon !== void 0 ? _formProfile$telephon : "---"
                 })]
               })]
             })]
           })]
         })
-      }) : null]
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_components_UserConfirmModal__WEBPACK_IMPORTED_MODULE_9__["default"], {
       showModal: showModal,
       handleClose: function handleClose() {

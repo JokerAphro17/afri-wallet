@@ -201,6 +201,18 @@ export const updatedAccountInfo = (params) =>
                 reject(message);
             });
     });
+export const updateAcessAccount = (uuid) =>
+    new Promise((resolve, reject) => {
+        HTTP_CLIENT.get(`users/${uuid}/restriction`)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                const message = handlingErrors(error);
+                reject(message);
+            });
+    });
+
 export const payment = (params) =>
     new Promise((resolve, reject) => {
         HTTP_CLIENT.post("payment/crypto", params)

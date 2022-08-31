@@ -1,5 +1,5 @@
 @component('mail::message')
-# Bienvenu sur Le JOBF <br>
+# Bienvenu sur African Wallet <br>
 Bonjour Mr/Mme {{ $user->lastname }} <br>
 Votre compte a été créé avec le role <strong> {{$user->role}} </strong>. <br>
 Vous information de connexion sont les suivantes: 
@@ -10,5 +10,6 @@ Vous information de connexion sont les suivantes:
 Connexion
 @endcomponent
 
-{{ config('app.name') }}
+Cordialement,<br>
+Equipe Technique de African
 @endcomponent
