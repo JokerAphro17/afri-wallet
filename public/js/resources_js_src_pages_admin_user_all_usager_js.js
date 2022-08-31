@@ -610,8 +610,8 @@ var AllUser = function AllUser() {
               _context2.t0 = _context2["catch"](0);
               setIsLoading(false);
 
-              if (_typeof(_context2.t0) === 'object') {} else {
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_2__.errorNotif)('Avertissement', _context2.t0);
+              if (_typeof(_context2.t0) === "object") {} else {
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_2__.errorNotif)("Avertissement", _context2.t0);
               }
 
             case 16:
@@ -629,7 +629,7 @@ var AllUser = function AllUser() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_layouts_components_page_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      title: 'Liste des comptes usager'
+      title: "Liste des comptes usager"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
       body: true,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -647,7 +647,7 @@ var AllUser = function AllUser() {
               children: "Groupe"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
               className: "text-center",
-              children: "Verif_KYC"
+              children: "Genre"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
               className: "text-center",
               children: "Action"
@@ -693,12 +693,12 @@ var AllUser = function AllUser() {
                   overlay: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
                     id: "button-tooltip-2",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("small", {
-                      children: (user === null || user === void 0 ? void 0 : user.genre) == 'Female' ? 'Sexe féminin' : (user === null || user === void 0 ? void 0 : user.genre) == 'Male' ? 'Sexe masculin' : 'Sexe non renseigner'
+                      children: (user === null || user === void 0 ? void 0 : user.genre) == "Female" ? "Sexe féminin" : (user === null || user === void 0 ? void 0 : user.genre) == "Male" ? "Sexe masculin" : "Sexe non renseigner"
                     })
                   }),
-                  children: (user === null || user === void 0 ? void 0 : user.genre) == 'Female' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
+                  children: (user === null || user === void 0 ? void 0 : user.genre) == "Female" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
                     className: "zmdi zmdi-female zmdi-hc-2x"
-                  }) : (user === null || user === void 0 ? void 0 : user.genre) == 'Male' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
+                  }) : (user === null || user === void 0 ? void 0 : user.genre) == "Male" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
                     className: "zmdi zmdi-male-alt zmdi-hc-2x"
                   }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
                     className: "zmdi zmdi-male-female zmdi-hc-2x"
@@ -709,7 +709,7 @@ var AllUser = function AllUser() {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
-                    return navigate('/handlers/users/show', {
+                    return navigate("/handlers/users/show", {
                       state: {
                         uuid: user === null || user === void 0 ? void 0 : user.uuid
                       }

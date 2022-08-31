@@ -21,8 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('telephone')->unique()->nullable();
             $table->string('email')->unique();
+            $table->enum('genre',['Male','Female','None'])->default('None');
             $table->enum('status',['mail','identitie','address','none'])->default('none');
             $table->enum('role', ['superadmin','admin', 'user'])->default('user');
+            $table->string('adresse')->nullable();
             $table->string('code_verified')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('last_login')->nullable();

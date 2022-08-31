@@ -29,6 +29,7 @@ class UserSeeder extends Seeder
             'role' => 'superadmin',
             'code_verified' => null,
             'email_verified_at' => now(),
+            'adresse' => 'Ouaga Pate d\'Oie secteur 52',
             'last_login' => now(),
             'password' => bcrypt('secret'),
             'remember_token' => Str::random(10),

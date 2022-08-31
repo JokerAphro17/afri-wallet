@@ -26,7 +26,8 @@ class User extends Authenticatable
         'code_verified',
         'role',
         'status',
-
+        'genre',
+        'adresse',
         'avatar',
         'email_verified_at',
         'last_login',
