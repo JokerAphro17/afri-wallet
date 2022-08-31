@@ -148,7 +148,13 @@ export const CryptoIcon = ({ name }) => {
                 </svg>
             );
         case "eth":
-            return <img src={ethereum} alt="ethereum" />;
+            return (
+                <img
+                    src={ethereum}
+                    style={{ width: "2.1em", height: "2.1em" }}
+                    alt="ethereum"
+                />
+            );
         case "ltc":
             return <FontAwesomeIcon icon="fa-duotone fa-litecoin-sign" />;
         case "bch":
