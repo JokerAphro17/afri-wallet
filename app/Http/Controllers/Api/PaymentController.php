@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Services\StripeService;
 use App\Http\Controllers\API\BaseController;
+use App\Models\User;
 
 
 class PaymentController extends BaseController
@@ -42,5 +43,21 @@ class PaymentController extends BaseController
             return $this->sendError('Error', $e->getMessage(), 400);
         }
 
+    }
+
+    public function paymentStat(){
+
+        try{
+            $transactions = Transaction::all();
+            $total = $transactions->sum('montant_recu') * 3780;
+            $total = number_format($total, 2, '.', '');
+            $nb_transaction = $transactions->count();
+            $customers = User::where('role', 'user')->count();
+            return $this->sendResponse(['total' => $total, 'nb_transaction' => $nb_transaction,
+            'customers' => $customers], 'Transactions retrieved successfully');
+        }
+        catch (\Exception $e){
+            return $this->sendError('Error', $e->getMessage(), 400);
+        }
     }
 }

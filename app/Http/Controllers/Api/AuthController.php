@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Mail\VerifyMail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Mail\NewPasswordMail;
 use App\Models\PasswordReset;
 use App\Mail\ResetPasswordMail;
 use App\Http\Controllers\Controller;
@@ -161,7 +162,7 @@ class AuthController extends BaseController
             'cpassword' => 'required:same:password',
         ]);
         if ($vaildator->fails()) {
-            return $this->sendError('Erreur de validations des champs.', $vaildator->errors());
+            return $this->sendError('Erreur de validations des champs.', $vaildator->errors(), 400);
         }
         try{
            $passwordReset=PasswordReset::where('token', $request->token);
@@ -214,7 +215,40 @@ class AuthController extends BaseController
     }
     
 
-   
+   public function updatePassword(Request $request){
+        $vaildator = Validator::make($request->all(), [
+            'old_password' => 'required',
+            'password' => 'required',
+            'cpassword' => 'required:same:password',
+        ]);
+        if ($vaildator->fails()) {
+            return $this->sendError('Erreur de validations des champs.', $vaildator->errors(),400);
+        }
+        try{
+           $user = auth()->user();
+            if(Hash::check($request->old_password, $user->password)){
+                $user->password = Hash::make($request->password);
+                $user->save();
+                return $this->sendResponse($user, 'Mot de passe modifié avec succès.');
+            }
+            return $this->sendError('Ancien mot de passe incorrect.', [], 400);
+        } catch (\Trowable $th) {
+            return $this->sendError('Erreur lors de la modification du mot de passe.', $th->getMessage(), 500);
+        }
+    }
+
+    public function generateNewPassword(Request $request, User $user){
+      
+        try{
+           $password = Str::random(8);
+           $user->password = Hash::make($password);
+           $user->save();
+           Mail::to($user->email)->send(new NewPasswordMail($password));
+           return $this->sendResponse($user, "Un nouveau mot de passe  a été envoyé a l'utilistaur");
+        } catch (\Trowable $th) {
+            return $this->sendError('Erreur lors de la génération du nouveau mot de passe.', $th->getMessage(), 500);
+        }
+    }
     
 }
 

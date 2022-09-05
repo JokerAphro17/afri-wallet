@@ -236,3 +236,14 @@ export const fetchPayment = (page) =>
                 reject(message);
             });
     });
+export const fetchStats = (token) =>
+    new Promise((resolve, reject) => {
+        HTTP_CLIENT.get(`payments/stats`)
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                const message = handlingErrors(error);
+                reject(message);
+            });
+    });

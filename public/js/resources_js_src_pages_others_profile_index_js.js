@@ -78,20 +78,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ProfileEdit = function ProfileEdit() {
-  var _HANDLER_STORAGE$GET$, _HANDLER_STORAGE$GET, _formProfile$lastname, _errors$lastname, _formProfile$firstnam, _errors$firstname, _formProfile$telephon, _errors$telephone, _formProfile$adresse, _errors$adresse, _formProfile$directio, _errors$direction, _formProfile$fonction, _errors$fonction, _formProfile$service, _errors$service, _formProfile$email, _errors$email, _formProfile$role, _errors$role;
+  var _HANDLER_STORAGE$GET$, _HANDLER_STORAGE$GET, _formProfile$lastname, _errors$lastname, _formProfile$firstnam, _errors$firstname, _formProfile$telephon, _errors$telephone, _formProfile$adresse, _errors$adresse, _formProfile$email, _errors$email, _formProfile$role, _errors$role;
 
-  var userModel = (_HANDLER_STORAGE$GET$ = (_HANDLER_STORAGE$GET = _data__WEBPACK_IMPORTED_MODULE_3__["default"].GET(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_5__.USER_SESSION, 'object')) === null || _HANDLER_STORAGE$GET === void 0 ? void 0 : _HANDLER_STORAGE$GET.data) !== null && _HANDLER_STORAGE$GET$ !== void 0 ? _HANDLER_STORAGE$GET$ : null;
+  var userModel = (_HANDLER_STORAGE$GET$ = (_HANDLER_STORAGE$GET = _data__WEBPACK_IMPORTED_MODULE_3__["default"].GET(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_5__.USER_SESSION, "object")) === null || _HANDLER_STORAGE$GET === void 0 ? void 0 : _HANDLER_STORAGE$GET.data) !== null && _HANDLER_STORAGE$GET$ !== void 0 ? _HANDLER_STORAGE$GET$ : null;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    lastname: '',
-    firstname: '',
-    email: '',
-    role: '',
-    adresse: '',
-    direction: '',
-    service: '',
-    fonction: '',
-    telephone: '',
+    lastname: "",
+    firstname: "",
+    email: "",
+    role: "",
+    adresse: "",
+    direction: "",
+    service: "",
+    fonction: "",
+    telephone: "",
     avatar: {}
   }),
       _useState2 = _slicedToArray(_useState, 2),
@@ -99,16 +99,16 @@ var ProfileEdit = function ProfileEdit() {
       setFormProfile = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    lastname: '',
-    firstname: '',
-    email: '',
-    role: '',
-    adresse: '',
-    direction: '',
-    service: '',
-    fonction: '',
-    telephone: '',
-    avatar: ''
+    lastname: "",
+    firstname: "",
+    email: "",
+    role: "",
+    adresse: "",
+    direction: "",
+    service: "",
+    fonction: "",
+    telephone: "",
+    avatar: ""
   }),
       _useState4 = _slicedToArray(_useState3, 2),
       errorFormProfile = _useState4[0],
@@ -124,15 +124,15 @@ var ProfileEdit = function ProfileEdit() {
       var _ref, _userModel$lastname, _ref2, _userModel$firstname, _ref3, _userModel$email, _ref4, _userModel$role, _ref5, _userModel$adresse, _ref6, _userModel$direction, _ref7, _userModel$service, _ref8, _userModel$fonction, _ref9, _userModel$telephone, _ref10, _userModel$avatar;
 
       setFormProfile(_objectSpread(_objectSpread({}, formProfile), {}, {
-        lastname: (_ref = (_userModel$lastname = userModel === null || userModel === void 0 ? void 0 : userModel.lastname) !== null && _userModel$lastname !== void 0 ? _userModel$lastname : formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname) !== null && _ref !== void 0 ? _ref : '',
-        firstname: (_ref2 = (_userModel$firstname = userModel === null || userModel === void 0 ? void 0 : userModel.firstname) !== null && _userModel$firstname !== void 0 ? _userModel$firstname : formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname) !== null && _ref2 !== void 0 ? _ref2 : '',
-        email: (_ref3 = (_userModel$email = userModel === null || userModel === void 0 ? void 0 : userModel.email) !== null && _userModel$email !== void 0 ? _userModel$email : formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _ref3 !== void 0 ? _ref3 : '',
-        role: (_ref4 = (_userModel$role = userModel === null || userModel === void 0 ? void 0 : userModel.role) !== null && _userModel$role !== void 0 ? _userModel$role : formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _ref4 !== void 0 ? _ref4 : '',
-        adresse: (_ref5 = (_userModel$adresse = userModel === null || userModel === void 0 ? void 0 : userModel.adresse) !== null && _userModel$adresse !== void 0 ? _userModel$adresse : formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _ref5 !== void 0 ? _ref5 : '',
-        direction: (_ref6 = (_userModel$direction = userModel === null || userModel === void 0 ? void 0 : userModel.direction) !== null && _userModel$direction !== void 0 ? _userModel$direction : formProfile === null || formProfile === void 0 ? void 0 : formProfile.direction) !== null && _ref6 !== void 0 ? _ref6 : '',
-        service: (_ref7 = (_userModel$service = userModel === null || userModel === void 0 ? void 0 : userModel.service) !== null && _userModel$service !== void 0 ? _userModel$service : formProfile === null || formProfile === void 0 ? void 0 : formProfile.service) !== null && _ref7 !== void 0 ? _ref7 : '',
-        fonction: (_ref8 = (_userModel$fonction = userModel === null || userModel === void 0 ? void 0 : userModel.fonction) !== null && _userModel$fonction !== void 0 ? _userModel$fonction : formProfile === null || formProfile === void 0 ? void 0 : formProfile.fonction) !== null && _ref8 !== void 0 ? _ref8 : '',
-        telephone: (_ref9 = (_userModel$telephone = userModel === null || userModel === void 0 ? void 0 : userModel.telephone) !== null && _userModel$telephone !== void 0 ? _userModel$telephone : formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _ref9 !== void 0 ? _ref9 : '',
+        lastname: (_ref = (_userModel$lastname = userModel === null || userModel === void 0 ? void 0 : userModel.lastname) !== null && _userModel$lastname !== void 0 ? _userModel$lastname : formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname) !== null && _ref !== void 0 ? _ref : "",
+        firstname: (_ref2 = (_userModel$firstname = userModel === null || userModel === void 0 ? void 0 : userModel.firstname) !== null && _userModel$firstname !== void 0 ? _userModel$firstname : formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname) !== null && _ref2 !== void 0 ? _ref2 : "",
+        email: (_ref3 = (_userModel$email = userModel === null || userModel === void 0 ? void 0 : userModel.email) !== null && _userModel$email !== void 0 ? _userModel$email : formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _ref3 !== void 0 ? _ref3 : "",
+        role: (_ref4 = (_userModel$role = userModel === null || userModel === void 0 ? void 0 : userModel.role) !== null && _userModel$role !== void 0 ? _userModel$role : formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _ref4 !== void 0 ? _ref4 : "",
+        adresse: (_ref5 = (_userModel$adresse = userModel === null || userModel === void 0 ? void 0 : userModel.adresse) !== null && _userModel$adresse !== void 0 ? _userModel$adresse : formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _ref5 !== void 0 ? _ref5 : "",
+        direction: (_ref6 = (_userModel$direction = userModel === null || userModel === void 0 ? void 0 : userModel.direction) !== null && _userModel$direction !== void 0 ? _userModel$direction : formProfile === null || formProfile === void 0 ? void 0 : formProfile.direction) !== null && _ref6 !== void 0 ? _ref6 : "",
+        service: (_ref7 = (_userModel$service = userModel === null || userModel === void 0 ? void 0 : userModel.service) !== null && _userModel$service !== void 0 ? _userModel$service : formProfile === null || formProfile === void 0 ? void 0 : formProfile.service) !== null && _ref7 !== void 0 ? _ref7 : "",
+        fonction: (_ref8 = (_userModel$fonction = userModel === null || userModel === void 0 ? void 0 : userModel.fonction) !== null && _userModel$fonction !== void 0 ? _userModel$fonction : formProfile === null || formProfile === void 0 ? void 0 : formProfile.fonction) !== null && _ref8 !== void 0 ? _ref8 : "",
+        telephone: (_ref9 = (_userModel$telephone = userModel === null || userModel === void 0 ? void 0 : userModel.telephone) !== null && _userModel$telephone !== void 0 ? _userModel$telephone : formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _ref9 !== void 0 ? _ref9 : "",
         avatar: (_ref10 = (_userModel$avatar = userModel === null || userModel === void 0 ? void 0 : userModel.avatar) !== null && _userModel$avatar !== void 0 ? _userModel$avatar : formProfile === null || formProfile === void 0 ? void 0 : formProfile.avatar) !== null && _ref10 !== void 0 ? _ref10 : {}
       }));
 
@@ -180,11 +180,7 @@ var ProfileEdit = function ProfileEdit() {
               data = (_response$data$data = response === null || response === void 0 ? void 0 : (_response$data = response.data) === null || _response$data === void 0 ? void 0 : _response$data.data) !== null && _response$data$data !== void 0 ? _response$data$data : null;
 
               if (data) {
-                _profile = _objectSpread(_objectSpread({}, data), {}, {
-                  avatar: !(data !== null && data !== void 0 && data.avatar) ? {} : {
-                    preview: "".concat(_utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_5__.API_STORAGE_URL, "/").concat(avatar)
-                  }
-                });
+                _profile = _objectSpread({}, data);
                 setFormProfile(_profile);
               }
 
@@ -197,8 +193,8 @@ var ProfileEdit = function ProfileEdit() {
               _context2.t0 = _context2["catch"](0);
               (0,_components_sweet_alert__WEBPACK_IMPORTED_MODULE_2__.alertClosed)();
 
-              if (_typeof(_context2.t0) === 'object') {} else {
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.errorNotif)('Avertissement', _context2.t0);
+              if (_typeof(_context2.t0) === "object") {} else {
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.errorNotif)("Avertissement", _context2.t0);
               }
 
             case 14:
@@ -239,7 +235,7 @@ var ProfileEdit = function ProfileEdit() {
 
             case 4:
               (0,_components_sweet_alert__WEBPACK_IMPORTED_MODULE_2__.alertClosed)();
-              (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.successNotif)('Notification', "Les informations de l'utilisateur ".concat(formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname, " ").concat(formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname, " a \xE9t\xE9 mise \xE0 jour avec succ\xE8s."));
+              (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.successNotif)("Notification", "Les informations de l'utilisateur ".concat(formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname, " ").concat(formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname, " a \xE9t\xE9 mise \xE0 jour avec succ\xE8s."));
               _context3.next = 15;
               break;
 
@@ -247,26 +243,26 @@ var ProfileEdit = function ProfileEdit() {
               _context3.prev = 8;
               _context3.t0 = _context3["catch"](1);
               (0,_components_sweet_alert__WEBPACK_IMPORTED_MODULE_2__.alertClosed)();
-              _message = '';
+              _message = "";
               _errorForm = {
                 lastname: "",
                 firstname: "",
                 genre: "",
                 email: "",
                 role: "",
-                adresse: '',
-                direction: '',
-                service: '',
-                fonction: '',
-                telephone: '',
+                adresse: "",
+                direction: "",
+                service: "",
+                fonction: "",
+                telephone: "",
                 avatar: ""
               };
 
-              if (_typeof(_context3.t0) === 'object') {
+              if (_typeof(_context3.t0) === "object") {
                 _errorForm = (0,_api_client__WEBPACK_IMPORTED_MODULE_1__.formatPropValueToString)(_context3.t0, _errorForm);
               } else {
                 _message = _context3.t0;
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.errorNotif)('Avertissement', _message);
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_10__.errorNotif)("Avertissement", _message);
               }
 
               setErrorFormProfile(_errorForm);
@@ -286,7 +282,7 @@ var ProfileEdit = function ProfileEdit() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_layouts_components_page_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      title: 'Modification des informations du profil connecté'
+      title: "Modification des informations du profil connecté"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"], {
       onSubmit: handleSubmit(onUpdated),
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -308,16 +304,16 @@ var ProfileEdit = function ProfileEdit() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
                 type: "text",
                 name: "lastname"
-              }, register('lastname', {
+              }, register("lastname", {
                 required: true
               })), {}, {
-                value: (_formProfile$lastname = formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname) !== null && _formProfile$lastname !== void 0 ? _formProfile$lastname : '',
+                value: (_formProfile$lastname = formProfile === null || formProfile === void 0 ? void 0 : formProfile.lastname) !== null && _formProfile$lastname !== void 0 ? _formProfile$lastname : "",
                 onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? 'is-invalid' : ''),
+                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? "is-invalid" : ""),
                 placeholder: "Renseigner le nom de famille"
               })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.lastname || errors !== null && errors !== void 0 && errors.lastname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$lastname = errors.lastname) === null || _errors$lastname === void 0 ? void 0 : _errors$lastname.type) === 'required' && "Ce champ nom de famille est requis" || (errorFormProfile === null || errorFormProfile === void 0 ? void 0 : errorFormProfile.lastname)
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$lastname = errors.lastname) === null || _errors$lastname === void 0 ? void 0 : _errors$lastname.type) === "required" && "Ce champ nom de famille est requis" || (errorFormProfile === null || errorFormProfile === void 0 ? void 0 : errorFormProfile.lastname)
               }) : null]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Group, {
               className: "mb-3",
@@ -327,16 +323,16 @@ var ProfileEdit = function ProfileEdit() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
                 type: "text",
                 name: "firstname"
-              }, register('firstname', {
+              }, register("firstname", {
                 required: true
               })), {}, {
-                value: (_formProfile$firstnam = formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname) !== null && _formProfile$firstnam !== void 0 ? _formProfile$firstnam : '',
+                value: (_formProfile$firstnam = formProfile === null || formProfile === void 0 ? void 0 : formProfile.firstname) !== null && _formProfile$firstnam !== void 0 ? _formProfile$firstnam : "",
                 onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? 'is-invalid' : ''),
+                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? "is-invalid" : ""),
                 placeholder: "Renseigner le(s) prenom(s)"
               })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.firstname || errors !== null && errors !== void 0 && errors.firstname ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$firstname = errors.firstname) === null || _errors$firstname === void 0 ? void 0 : _errors$firstname.type) === 'required' && "Ce champ prenom(s) est requis" || errorFormProfile.firstname
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$firstname = errors.firstname) === null || _errors$firstname === void 0 ? void 0 : _errors$firstname.type) === "required" && "Ce champ prenom(s) est requis" || errorFormProfile.firstname
               }) : null]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -348,20 +344,20 @@ var ProfileEdit = function ProfileEdit() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Label, {
                 children: "Num\xE9ro de t\xE9l\xE9phone"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)((cleave_js_react__WEBPACK_IMPORTED_MODULE_7___default()), {
-                className: classnames__WEBPACK_IMPORTED_MODULE_8___default()('form-control', {
-                  'is-invalid': (errorFormProfile === null || errorFormProfile === void 0 ? void 0 : errorFormProfile.telephone) || (errors === null || errors === void 0 ? void 0 : errors.telephone)
+                className: classnames__WEBPACK_IMPORTED_MODULE_8___default()("form-control", {
+                  "is-invalid": (errorFormProfile === null || errorFormProfile === void 0 ? void 0 : errorFormProfile.telephone) || (errors === null || errors === void 0 ? void 0 : errors.telephone)
                 }),
                 name: "telephone",
-                value: (_formProfile$telephon = formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _formProfile$telephon !== void 0 ? _formProfile$telephon : '',
+                value: (_formProfile$telephon = formProfile === null || formProfile === void 0 ? void 0 : formProfile.telephone) !== null && _formProfile$telephon !== void 0 ? _formProfile$telephon : "",
                 placeholder: "Renseigner le num\xE9ro de t\xE9l\xE9phone",
                 options: {
                   phone: true,
-                  phoneRegionCode: 'BF'
+                  phoneRegionCode: "BF"
                 },
                 onChange: handlerInput
               }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.telephone || errors !== null && errors !== void 0 && errors.telephone ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$telephone = errors.telephone) === null || _errors$telephone === void 0 ? void 0 : _errors$telephone.type) === 'required' && "Ce champ telephone est requis" || errorFormProfile.telephone
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$telephone = errors.telephone) === null || _errors$telephone === void 0 ? void 0 : _errors$telephone.type) === "required" && "Ce champ telephone est requis" || errorFormProfile.telephone
               }) : null]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Group, {
               className: "mb-3",
@@ -371,102 +367,27 @@ var ProfileEdit = function ProfileEdit() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
                 type: "text",
                 name: "adresse"
-              }, register('adresse', {
+              }, register("adresse", {
                 required: false
               })), {}, {
-                value: (_formProfile$adresse = formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _formProfile$adresse !== void 0 ? _formProfile$adresse : '',
+                value: (_formProfile$adresse = formProfile === null || formProfile === void 0 ? void 0 : formProfile.adresse) !== null && _formProfile$adresse !== void 0 ? _formProfile$adresse : "",
                 onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? 'is-invalid' : ''),
+                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? "is-invalid" : ""),
                 placeholder: "Renseigner l'adresse domicili\xE9e"
               })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.adresse || errors !== null && errors !== void 0 && errors.adresse ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$adresse = errors.adresse) === null || _errors$adresse === void 0 ? void 0 : _errors$adresse.type) === 'required' && "Ce champ adresse est requis" || errorFormProfile.adresse
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$adresse = errors.adresse) === null || _errors$adresse === void 0 ? void 0 : _errors$adresse.type) === "required" && "Ce champ adresse est requis" || errorFormProfile.adresse
               }) : null]
             })]
           })]
         })]
-      }), (userModel === null || userModel === void 0 ? void 0 : userModel.role) !== 'user' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        body: true,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"].Title, {
-          children: "Information professionnelle"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"].Subtitle, {
-          className: "mb-2 text-muted",
-          children: "Veuillez renseigner les informations professionnelle de l'utilisateur"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
-            sm: 12,
-            md: 6,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Group, {
-              className: "mb-3",
-              controlId: "formUserDirection",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Label, {
-                children: "Direction"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
-                type: "text",
-                name: "direction"
-              }, register('direction', {
-                required: true
-              })), {}, {
-                value: (_formProfile$directio = formProfile === null || formProfile === void 0 ? void 0 : formProfile.direction) !== null && _formProfile$directio !== void 0 ? _formProfile$directio : '',
-                onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.direction || errors !== null && errors !== void 0 && errors.direction ? 'is-invalid' : ''),
-                placeholder: "Renseigner la direction"
-              })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.direction || errors !== null && errors !== void 0 && errors.direction ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
-                className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$direction = errors.direction) === null || _errors$direction === void 0 ? void 0 : _errors$direction.type) === 'required' && "Ce champ direction est requis" || errorFormProfile.direction
-              }) : null]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Group, {
-              className: "mb-3",
-              controlId: "formUserFonction",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Label, {
-                children: "Fonction"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
-                type: "text",
-                name: "fonction"
-              }, register('fonction', {
-                required: true
-              })), {}, {
-                value: (_formProfile$fonction = formProfile === null || formProfile === void 0 ? void 0 : formProfile.fonction) !== null && _formProfile$fonction !== void 0 ? _formProfile$fonction : '',
-                onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.fonction || errors !== null && errors !== void 0 && errors.fonction ? 'is-invalid' : ''),
-                placeholder: "Renseigner la fonction"
-              })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.fonction || errors !== null && errors !== void 0 && errors.fonction ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
-                className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$fonction = errors.fonction) === null || _errors$fonction === void 0 ? void 0 : _errors$fonction.type) === 'required' && "Ce champ fonction est requis" || errorFormProfile.fonction
-              }) : null]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
-            sm: 12,
-            md: 6,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Group, {
-              className: "mb-3",
-              controlId: "formUserService",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Label, {
-                children: "Service"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
-                type: "text",
-                name: "service"
-              }, register('service', {
-                required: true
-              })), {}, {
-                value: (_formProfile$service = formProfile === null || formProfile === void 0 ? void 0 : formProfile.service) !== null && _formProfile$service !== void 0 ? _formProfile$service : '',
-                onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.service || errors !== null && errors !== void 0 && errors.service ? 'is-invalid' : ''),
-                placeholder: "Renseigner le service"
-              })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.service || errors !== null && errors !== void 0 && errors.service ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
-                className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$service = errors.service) === null || _errors$service === void 0 ? void 0 : _errors$service.type) === 'required' && "Ce champ service est requis" || errorFormProfile.service
-              }) : null]
-            })
-          })]
-        })]
-      }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
         body: true,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"].Title, {
           children: "Information d'acc\xE8s"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"].Subtitle, {
           className: "mb-2 text-muted",
-          children: "Veuillez renseigner permettant \xE0 l'utilisateur de se connecter"
+          children: "Veuillez renseigner les informations permettant \xE0 l'utilisateur de se connecter"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__["default"], {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
             sm: 12,
@@ -479,16 +400,16 @@ var ProfileEdit = function ProfileEdit() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Control, _objectSpread(_objectSpread({
                 type: "email",
                 name: "email"
-              }, register('email', {
+              }, register("email", {
                 required: true
               })), {}, {
-                value: (_formProfile$email = formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _formProfile$email !== void 0 ? _formProfile$email : '',
+                value: (_formProfile$email = formProfile === null || formProfile === void 0 ? void 0 : formProfile.email) !== null && _formProfile$email !== void 0 ? _formProfile$email : "",
                 onChange: handlerInput,
-                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? 'is-invalid' : ''),
+                className: "".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? "is-invalid" : ""),
                 placeholder: "Renseigner l'adresse mail"
               })), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.email || errors !== null && errors !== void 0 && errors.email ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$email = errors.email) === null || _errors$email === void 0 ? void 0 : _errors$email.type) === 'required' && "Ce champ adresse mail est requis" || errorFormProfile.email
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$email = errors.email) === null || _errors$email === void 0 ? void 0 : _errors$email.type) === "required" && "Ce champ adresse mail est requis" || errorFormProfile.email
               }) : null]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -502,27 +423,27 @@ var ProfileEdit = function ProfileEdit() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Select, {
                 disabled: true,
                 name: "role",
-                value: (_formProfile$role = formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _formProfile$role !== void 0 ? _formProfile$role : '',
+                value: (_formProfile$role = formProfile === null || formProfile === void 0 ? void 0 : formProfile.role) !== null && _formProfile$role !== void 0 ? _formProfile$role : "",
                 onChange: handlerInput,
-                className: "form-control ".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? 'is-invalid' : ''),
+                className: "form-control ".concat(errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? "is-invalid" : ""),
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("option", {
                   children: "Choisir le role"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("option", {
-                  value: 'journalist',
+                  value: "journalist",
                   children: "Gestionnaire"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("option", {
-                  value: 'accounting',
+                  value: "accounting",
                   children: "Comptable"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("option", {
-                  value: 'admin',
+                  value: "admin",
                   children: "Administrateur"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("option", {
-                  value: 'observer',
+                  value: "observer",
                   children: "Consultant"
                 })]
               }), errorFormProfile !== null && errorFormProfile !== void 0 && errorFormProfile.role || errors !== null && errors !== void 0 && errors.role ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$role = errors.role) === null || _errors$role === void 0 ? void 0 : _errors$role.type) === 'required' && "Ce champ role est requis" || errorFormProfile.role
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$role = errors.role) === null || _errors$role === void 0 ? void 0 : _errors$role.type) === "required" && "Ce champ role est requis" || errorFormProfile.role
               }) : null]
             })
           })]
@@ -531,9 +452,9 @@ var ProfileEdit = function ProfileEdit() {
         body: true,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
           disabled: isLoading,
-          variant: 'secondary',
+          variant: "secondary",
           type: "submit",
-          children: ["Modifier ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["default"], {
+          children: ["Modifier", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["default"], {
             animation: "border",
             hidden: !isLoading,
             size: "sm"

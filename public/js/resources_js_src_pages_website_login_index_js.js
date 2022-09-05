@@ -10611,22 +10611,22 @@ var LoginPage = function LoginPage(props) {
       errors = _useForm.formState.errors;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       formLogin = _useState2[0],
       setFormLogin = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   }),
       _useState4 = _slicedToArray(_useState3, 2),
       errorFormLogin = _useState4[0],
       setErrorFormLogin = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
       message = _useState6[0],
       setMessage = _useState6[1];
@@ -10667,10 +10667,10 @@ var LoginPage = function LoginPage(props) {
                 break;
               }
 
-              _message = 'Ce champ est requis';
+              _message = "Ce champ est requis";
               setErrorFormLogin({
-                email: !formLogin.email ? _message : '',
-                password: !formLogin.password ? _message : ''
+                email: !formLogin.email ? _message : "",
+                password: !formLogin.password ? _message : ""
               });
               return _context.abrupt("return");
 
@@ -10687,10 +10687,10 @@ var LoginPage = function LoginPage(props) {
 
               if (dataReceive) {
                 auth.signin(dataReceive, function () {
-                  var goToDashboard = '/admins';
+                  var goToDashboard = "/admins";
 
                   if ((dataReceive === null || dataReceive === void 0 ? void 0 : dataReceive.role) == _utilities_constant_app_constant__WEBPACK_IMPORTED_MODULE_4__.ROLES.USER) {
-                    goToDashboard = '/users';
+                    goToDashboard = "/users";
                   }
 
                   navigate(goToDashboard);
@@ -10704,17 +10704,17 @@ var LoginPage = function LoginPage(props) {
               _context.prev = 14;
               _context.t0 = _context["catch"](5);
               (0,_components_sweet_alert__WEBPACK_IMPORTED_MODULE_6__.alertClosed)();
-              _message2 = '';
+              _message2 = "";
               _errorForm = {
-                email: '',
-                password: ''
+                email: "",
+                password: ""
               };
 
-              if (_typeof(_context.t0) === 'object') {
+              if (_typeof(_context.t0) === "object") {
                 _errorForm = (0,_api_client__WEBPACK_IMPORTED_MODULE_1__.formatPropValueToString)(_context.t0, _errorForm);
               } else {
                 _message2 = _context.t0;
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_7__.errorNotif)('Echec', _context.t0);
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_7__.errorNotif)("Echec", _context.t0);
               }
 
               setMessage(_message2);
@@ -10788,7 +10788,7 @@ var LoginPage = function LoginPage(props) {
                   className: "wrap-input100 validate-input mb-0",
                   "data-validate": "Password is required",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
-                    type: 'password',
+                    type: "password",
                     label: "Password",
                     id: "outlined-size-small",
                     size: "small",
@@ -10811,7 +10811,7 @@ var LoginPage = function LoginPage(props) {
                   className: "mb-0",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                     className: "text-primary ml-1",
-                    to: '/forgot-password',
+                    to: "/forgot-password",
                     children: "Mot de passe oubli\xE9 ?"
                   })
                 })
@@ -10822,24 +10822,6 @@ var LoginPage = function LoginPage(props) {
                   className: "login100-form-btn btn-primary",
                   children: "Se connecter"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: " flex-c-m text-center mt-3",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                  children: "Ou"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "social-icons",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("ul", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
-                        to: '/register',
-                        className: "btn  btn-social btn-block btn-mail",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("i", {
-                          className: "fa fa-envelope"
-                        }), " S'inscrire "]
-                      })
-                    })
-                  })
-                })]
               })]
             })]
           })

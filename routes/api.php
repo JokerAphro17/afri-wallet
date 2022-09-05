@@ -39,4 +39,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/payment/crypto',[PaymentController::class, 'bycard']);
     Route::get('/payment/liste/{page}',[PaymentController::class, 'paymentListe']);
     Route::get('/users/{user}/restriction',[UserController::class, 'access']);
+    Route::post('accounts/update/password',[AuthController::class, 'updatePassword']);
+    Route::get('users/{user}/password/update',[AuthController::class, 'generateNewPassword']);
+    Route::get('payments/stats',[PaymentController::class, 'paymentStat']);
 });

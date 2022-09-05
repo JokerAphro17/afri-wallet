@@ -70,29 +70,29 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ProfileAccessEdit = function ProfileAccessEdit() {
-  var _errors$password, _errors$password2, _errors$new_password, _errors$password_conf;
+  var _errors$password, _errors$password2, _errors$password3, _errors$cpassword;
 
   var auth = (0,_utilities_hook_useAuth__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    password: '',
-    new_password: '',
-    password_confirmation: ''
+    old_password: "",
+    password: "",
+    cpassword: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       formAccess = _useState2[0],
       setFormAccess = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    password: '',
-    new_password: '',
-    password_confirmation: ''
+    password: "",
+    cpassword: "",
+    old_password: ""
   }),
       _useState4 = _slicedToArray(_useState3, 2),
       errorFormAccess = _useState4[0],
       setErrorFormAccess = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
       message = _useState6[0],
       setMessage = _useState6[1];
@@ -129,16 +129,16 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (!(!formAccess.new_password || !formAccess.password || !formAccess.password_confirmation)) {
+              if (!(!formAccess.old_password || !formAccess.password || !formAccess.cpassword)) {
                 _context.next = 4;
                 break;
               }
 
-              _message = 'mot de passe est requis';
+              _message = "mot de passe est requis";
               setErrorFormAccess({
-                password: !formAccess.password ? "L'actuelle ".concat(_message) : '',
-                new_password: !formAccess.new_password ? "Le nouveau ".concat(_message) : '',
-                password_confirmation: !formAccess.password_confirmation ? "Confirmer nouveau ".concat(_message) : ''
+                old_password: !formAccess.old_password ? "L'actuelle ".concat(_message) : "",
+                password: !formAccess.password ? "Le nouveau ".concat(_message) : "",
+                cpassword: !formAccess.cpassword ? "Confirmer nouveau ".concat(_message) : ""
               });
               return _context.abrupt("return");
 
@@ -149,7 +149,7 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
               return (0,_api_request__WEBPACK_IMPORTED_MODULE_3__.updateAccountPassword)(formAccess);
 
             case 8:
-              (0,_components_notification__WEBPACK_IMPORTED_MODULE_5__.successNotif)('Notification', 'Mot de passe mise à jour avec succès.');
+              (0,_components_notification__WEBPACK_IMPORTED_MODULE_5__.successNotif)("Notification", "Mot de passe mise à jour avec succès.");
               auth.signout();
               _context.next = 20;
               break;
@@ -158,18 +158,18 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
               _context.prev = 12;
               _context.t0 = _context["catch"](4);
               setIsloading(false);
-              _message2 = '';
+              _message2 = "";
               _errorForm = {
-                password: '',
-                new_password: '',
-                password_confirmation: ''
+                password: "",
+                new_password: "",
+                password_confirmation: ""
               };
 
-              if (_typeof(_context.t0) === 'object') {
+              if (_typeof(_context.t0) === "object") {
                 _errorForm = (0,_api_client__WEBPACK_IMPORTED_MODULE_6__.formatPropValueToString)(_context.t0, _errorForm);
               } else {
                 _message2 = _context.t0;
-                (0,_components_notification__WEBPACK_IMPORTED_MODULE_5__.errorNotif)('Avertissement', _message2);
+                (0,_components_notification__WEBPACK_IMPORTED_MODULE_5__.errorNotif)("Avertissement", _message2);
               }
 
               setMessage(_message2);
@@ -198,7 +198,7 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_layouts_components_page_header__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      title: 'Modification des accès du profil connecté'
+      title: "Modification des accès du profil connecté"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
       body: true,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"].Title, {
@@ -224,17 +224,17 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
                 children: "Mot de passe actuelle"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Control, _objectSpread(_objectSpread({
                 type: "password",
-                name: "password"
-              }, register('password', {
+                name: "old_password"
+              }, register("old_password", {
                 required: true
               })), {}, {
-                value: formAccess.password,
+                value: formAccess.old_password,
                 onChange: handlerInput,
-                className: "".concat(errors !== null && errors !== void 0 && errors.password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password ? 'is-invalid' : ''),
+                className: "".concat(errors !== null && errors !== void 0 && errors.old_password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.old_password ? "is-invalid" : ""),
                 placeholder: "Renseigner le mot de passe"
-              })), errors !== null && errors !== void 0 && (_errors$password = errors.password) !== null && _errors$password !== void 0 && _errors$password.type || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
+              })), errors !== null && errors !== void 0 && (_errors$password = errors.password) !== null && _errors$password !== void 0 && _errors$password.type || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.old_password ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$password2 = errors.password) === null || _errors$password2 === void 0 ? void 0 : _errors$password2.type) === 'required' && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.password)
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$password2 = errors.password) === null || _errors$password2 === void 0 ? void 0 : _errors$password2.type) === "required" && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.old_password)
               }) : null]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Group, {
               className: "mb-3",
@@ -243,17 +243,17 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
                 children: "Le nouveau mot de passe"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Control, _objectSpread(_objectSpread({
                 type: "password",
-                name: "new_password"
-              }, register('new_password', {
+                name: "password"
+              }, register("password", {
                 required: true
               })), {}, {
-                value: formAccess.new_password,
+                value: formAccess.password,
                 onChange: handlerInput,
-                className: "".concat(errors !== null && errors !== void 0 && errors.new_password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.new_password ? 'is-invalid' : ''),
+                className: "".concat(errors !== null && errors !== void 0 && errors.password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password ? "is-invalid" : ""),
                 placeholder: "Renseigner le nouveau mot de passe"
-              })), errors !== null && errors !== void 0 && errors.new_password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.new_password ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
+              })), errors !== null && errors !== void 0 && errors.password || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$new_password = errors.new_password) === null || _errors$new_password === void 0 ? void 0 : _errors$new_password.type) === 'required' && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.new_password)
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$password3 = errors.password) === null || _errors$password3 === void 0 ? void 0 : _errors$password3.type) === "required" && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.password)
               }) : null]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -266,17 +266,17 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
                 children: "Confirmer le nouveau mot de passe"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Control, _objectSpread(_objectSpread({
                 type: "password",
-                name: "password_confirmation"
-              }, register('password_confirmation', {
+                name: "cpassword"
+              }, register("cpassword", {
                 required: true
               })), {}, {
-                value: formAccess.password_confirmation,
+                value: formAccess.cpassword,
                 onChange: handlerInput,
-                className: "".concat(errors !== null && errors !== void 0 && errors.password_confirmation || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password_confirmation ? 'is-invalid' : ''),
+                className: "".concat(errors !== null && errors !== void 0 && errors.cpassword || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.cpassword ? "is-invalid" : ""),
                 placeholder: "Confirmer le nouveau mot de passe"
-              })), errors !== null && errors !== void 0 && errors.password_confirmation || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.password_confirmation ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
+              })), errors !== null && errors !== void 0 && errors.cpassword || errorFormAccess !== null && errorFormAccess !== void 0 && errorFormAccess.cpassword ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"].Text, {
                 className: "text-danger",
-                children: (errors === null || errors === void 0 ? void 0 : (_errors$password_conf = errors.password_confirmation) === null || _errors$password_conf === void 0 ? void 0 : _errors$password_conf.type) === 'required' && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.password_confirmation)
+                children: (errors === null || errors === void 0 ? void 0 : (_errors$cpassword = errors.cpassword) === null || _errors$cpassword === void 0 ? void 0 : _errors$cpassword.type) === "required" && "Ce champ est requis" || (errorFormAccess === null || errorFormAccess === void 0 ? void 0 : errorFormAccess.cpassword)
               }) : null]
             })
           })]
@@ -284,7 +284,7 @@ var ProfileAccessEdit = function ProfileAccessEdit() {
           disabled: isLoading,
           variant: "primary",
           type: "submit",
-          children: ["Modifier le mot de passe ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
+          children: ["Modifier le mot de passe", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__["default"], {
             animation: "border",
             hidden: !isLoading,
             size: "sm"
